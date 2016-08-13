@@ -12,3 +12,5 @@
 *.img
 *.o
 *.d
+adbd
+libcutils.so

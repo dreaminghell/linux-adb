@@ -4,7 +4,7 @@ UDC=`ls /sys/class/udc/| awk '{print $1}'`
 
 if [ "$1" = "" ];then
 	echo ""
-elif [ "$1" = "rerun" ];then
+elif [ "$1" = "reattach" ];then
 	echo $UDC > /sys/kernel/config/usb_gadget/g1/UDC
 	return
 fi

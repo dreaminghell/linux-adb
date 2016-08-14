@@ -14,7 +14,7 @@ Now adbd is installed in `/usr/local/sbin/`
 run the following command In board and connect the board to the host computer:  
 ```
 run_adbd.sh 
-UDC=`ls /sys/class/udc/| awk \'{print $1}'`
+UDC=`ls /sys/class/udc/| awk '{print $1}'`
 echo $UDC > /sys/kernel/config/usb_gadget/g1/UDC
 ```
 run the following command in host:  

@@ -31,7 +31,7 @@ ln -s  /sys/kernel/config/usb_gadget/g1/functions/ffs.adb /sys/kernel/config/usb
 echo "adb" > /sys/kernel/config/usb_gadget/g1/configs/b.1/strings/0x409/configuration
 mount -t functionfs adb /dev/usb-ffs/adb
 
-./usr/local/sbin/adbd  &
+adbd  &
 
 echo $UDC > /sys/kernel/config/usb_gadget/g1/UDC
 

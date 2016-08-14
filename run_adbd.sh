@@ -2,13 +2,6 @@
 
 UDC=`ls /sys/class/udc/| awk '{print $1}'`
 
-if [ "$1" = "" ];then
-	echo ""
-elif [ "$1" = "reattach" ];then
-	echo $UDC > /sys/kernel/config/usb_gadget/g1/UDC
-	return
-fi
-
 mkdir /dev/usb-ffs -m 0770 
 mkdir /dev/usb-ffs/adb -m 0770 
 
@@ -33,7 +26,7 @@ mount -t functionfs adb /dev/usb-ffs/adb
 
 adbd  &
 
-echo $UDC > /sys/kernel/config/usb_gadget/g1/UDC
+
 
 
 

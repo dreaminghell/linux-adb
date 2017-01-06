@@ -24,4 +24,3 @@ sudo adb shell
 ```
 Notes:  
 1. Make sure OTG port is enabled, try `ls /sys/class/udc/` to list.  
-2. Once you unplug the device, you must issue `echo $UDC > /sys/kernel/config/usb_gadget/g1/UDC` to re-enable gadget if you want to connect again.
